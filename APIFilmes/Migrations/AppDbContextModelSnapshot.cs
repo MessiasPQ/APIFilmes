@@ -39,7 +39,7 @@ namespace APIFilmes.Migrations
                     b.HasIndex("EnderecoFK")
                         .IsUnique();
 
-                    b.ToTable("Cinemas");
+                    b.ToTable("Cinemas", (string)null);
                 });
 
             modelBuilder.Entity("APIFilmes.Models.Endereco", b =>
@@ -61,7 +61,7 @@ namespace APIFilmes.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Enderecos");
+                    b.ToTable("Enderecos", (string)null);
                 });
 
             modelBuilder.Entity("APIFilmes.Models.Filme", b =>
@@ -88,7 +88,7 @@ namespace APIFilmes.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Filmes");
+                    b.ToTable("Filmes", (string)null);
                 });
 
             modelBuilder.Entity("APIFilmes.Models.Cinema", b =>

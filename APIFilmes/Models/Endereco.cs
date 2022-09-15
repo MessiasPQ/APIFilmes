@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using APIFilmes.Models;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace APIFilmes.Models
 {
@@ -15,6 +16,7 @@ namespace APIFilmes.Models
         public string Logradouro { get; set; }
         public string Bairro { get; set; }
         public int Numero { get; set; }
-        public Cinema Cinema { get; set; }
+        [JsonIgnore]
+        public virtual Cinema Cinema { get; set; }
     }
 }

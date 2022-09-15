@@ -9,7 +9,7 @@ string mySqlConnection =
     builder.Configuration.GetConnectionString("APIConnection");
 
 builder.Services.AddDbContextPool<AppDbContext>(options => 
-    options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
+    options.UseLazyLoadingProxies().UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();
