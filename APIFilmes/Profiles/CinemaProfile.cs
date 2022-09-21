@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using APIFilmes.Data.Dtos.Cinema;
+using APIFilmes.Data.Dtos.Cinemas;
 
 namespace APIFilmes.Profiles
 {
@@ -13,9 +13,9 @@ namespace APIFilmes.Profiles
     {
         public CinemaProfile()
         {
-            CreateMap<CreateEnderecoDto, Cinema>();
-            CreateMap<Cinema, ReadEnderecoDto>();
-            CreateMap<UpdateEnderecoDto, Cinema>();
+            CreateMap<CreateCinemaDto, Cinema>();
+            CreateMap<Cinema, ReadCinemaDto>();
+            CreateMap<UpdateCinemaDto, Cinema>();
         }
     }
 }

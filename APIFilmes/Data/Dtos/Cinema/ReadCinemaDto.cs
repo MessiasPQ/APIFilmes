@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace APIFilmes.Data.Dtos.Cinema
+namespace APIFilmes.Data.Dtos.Cinemas
 {
-    public class ReadEnderecoDto
+    public class ReadCinemaDto
     {
         [Key]
         [Required]

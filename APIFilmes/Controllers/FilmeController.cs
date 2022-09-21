@@ -1,5 +1,5 @@
 ﻿using APIFilmes.Data;
-using APIFilmes.Data.Dtos.Filme;
+using APIFilmes.Data.Dtos.Filmes;
 using APIFilmes.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;

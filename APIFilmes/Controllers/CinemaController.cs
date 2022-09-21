@@ -1,4 +1,4 @@
-﻿using APIFilmes.Data.Dtos.Cinema;
+﻿using APIFilmes.Data.Dtos.Cinemas;
 using APIFilmes.Data;
 using APIFilmes.Models;
 using AutoMapper;
@@ -26,7 +26,7 @@ namespace APIFilmes.Controllers
 
 
         [HttpPost]
-        public IActionResult AdicionaCinema([FromBody] CreateEnderecoDto cinemaDto)
+        public IActionResult AdicionaCinema([FromBody] CreateCinemaDto cinemaDto)
         {
             Cinema cinema = _mapper.Map<Cinema>(cinemaDto);
             _context.Cinemas.Add(cinema);
@@ -35,7 +35,7 @@ namespace APIFilmes.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Cinema> RecuperaCinemas([FromQuery] string nomeDoFilme)
+        public IEnumerable<Cinema> RecuperaCinemas([FromQuery] string nomeDoCinema)
         {
             return _context.Cinemas;
         }
@@ -46,14 +46,14 @@ namespace APIFilmes.Controllers
             Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
             if (cinema != null)
             {
-                ReadEnderecoDto cinemaDto = _mapper.Map<ReadEnderecoDto>(cinema);
+                ReadCinemaDto cinemaDto = _mapper.Map<ReadCinemaDto>(cinema);
                 return Ok(cinemaDto);
             }
             return NotFound();
         }
 
         [HttpPut("{id}")]
-        public IActionResult AtualizaCinema(int id, [FromBody] UpdateEnderecoDto cinemaDto)
+        public IActionResult AtualizaCinema(int id, [FromBody] UpdateCinemaDto cinemaDto)
         {
             Cinema cinema = _context.Cinemas.FirstOrDefault(cinema => cinema.Id == id);
             if (cinema == null)

@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace APIFilmes.Data.Dtos.Cinema
+namespace APIFilmes.Data.Dtos.Cinemas
 {
-    public class CreateEnderecoDto
+    public class CreateCinemaDto
     {
         [Required(ErrorMessage = "O campo de nome é obrigatório")]
         public string Nome { get; set; }
